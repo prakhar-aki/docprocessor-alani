@@ -1096,6 +1096,9 @@ def init_ocr():
 
 st.markdown("""
     <style>
+
+    
+            
         .stButton>button {
             width: 100%;
             margin-top: 20px;
@@ -1122,6 +1125,21 @@ st.markdown("""
             padding:2rem !important;
             padding-top: 5px !important;
         }
+        .st-bi{
+            color:#1A2F50 !important;
+            
+        }
+        .st-key-refresh
+        {
+            color:#1A2F50;
+
+            button{
+                border:none;    
+                  box-shadow: 5px 5px 5px rgba(0.2, 0.2, 0.2, 0.2); /* Proper shadow format */
+            }
+            
+        }
+             
     </style>
 """, unsafe_allow_html=True)
 
@@ -2651,7 +2669,7 @@ def main_app():
 
         _, center_col, _ = st.columns([1, 1, 1])
         with center_col:
-            if st.button("🔄 Process Next Document", key="refresh"):
+            if st.button("Process Next Document", key="refresh"):
                 refresh_page()
         
         if 'edited_df' not in st.session_state:
