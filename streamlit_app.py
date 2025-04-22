@@ -1151,6 +1151,9 @@ st.markdown("""
                 color:white !important;
                 background-color:hsl(38.03deg 32.72% 57.45%);
             }
+            button:focus:not(:active) {
+                color:white !important;
+            }
             
         }
         
@@ -1174,6 +1177,9 @@ st.markdown("""
             button:hover{
                   color:white !important;
                 background-color:hsl(38.03deg 32.72% 57.45%);
+            }
+            button:focus:not(:active) {
+                color:white !important;
             }
         }
         .st-key-save_changes_existing , .st-key-save_changes_updated{
