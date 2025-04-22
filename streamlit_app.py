@@ -2777,13 +2777,13 @@ def main_app():
                         with pd.ExcelWriter(buffer, engine='openpyxl') as writer:
                             edited_df.to_excel(writer, index=False)
                         
-                        st.download_button(
-                            label="📥 Download Excel",
-                            data=buffer.getvalue(),
-                            file_name=excel_file,
-                            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-                            key="download_existing"
-                        )
+                        # st.download_button(
+                        #     label="📥 Download Excel",
+                        #     data=buffer.getvalue(),
+                        #     file_name=excel_file,
+                        #     mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                        #     key="download_existing"
+                        # )
                 
                 except Exception as e:
                     st.error(f"Error displaying existing table: {str(e)}")
