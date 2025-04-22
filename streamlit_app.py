@@ -2874,7 +2874,7 @@ def display_branding():
     
     with col1:
         st.markdown("""
-        <h1 style='margin-bottom: 0px; font-size: 1.5rem;'>AKI Agentic AI Intelligent Document Processor</h1>
+        <p style='margin-bottom: 0px; font-size: 1.5rem;'>AKI Agentic AI Intelligent Document Processor</p>
         """, unsafe_allow_html=True)
             
     # with col2:
