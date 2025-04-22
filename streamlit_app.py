@@ -235,13 +235,13 @@ def display_excel_native(excel_data):
         )
         
         search_key = f"search_input_{datetime.now().strftime('%Y%m%d%H%M%S')}"
-        # search = st.text_input("🔍 Search in table:", key=search_key)
+        search = st.text_input("🔍 Search in table:", key=search_key)
         
-        # if search:
-        #     mask = edited_df.astype(str).apply(lambda x: x.str.contains(search, case=False)).any(axis=1)
-        #     filtered_df = edited_df[mask]
-        # else:
-        #     filtered_df = edited_df
+        if search:
+            mask = edited_df.astype(str).apply(lambda x: x.str.contains(search, case=False)).any(axis=1)
+            filtered_df = edited_df[mask]
+        else:
+            filtered_df = edited_df
             
         st.markdown(f"**Total Rows:** {len(filtered_df)} | **Total Columns:** {len(filtered_df.columns)}")
         
@@ -1562,9 +1562,9 @@ def update_user_tracking(username, files_uploaded=0, rows_processed=0):
         try:
             df.to_excel(USER_TRACKING_FILE, index=False)
             if files_uploaded > 0:
-                st.success(f"""Upload tracked successfully:
-                - Files uploaded: {files_uploaded}
-                - Rows processed: {rows_processed}""")
+                st.success(f"""File(s) uploaded successfully:
+                - File(s) uploaded: {files_uploaded}
+                - Row(s) processed: {rows_processed}""")
         except Exception as e:
             st.warning(f"Could not save tracking file: {str(e)}")
             st.session_state['tracking_df'] = df
