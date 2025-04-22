@@ -2644,7 +2644,7 @@ def main_app():
     if st.session_state.username == 'admin@akigroup.com':
         tab1, tab2, tab4 = st.tabs(["Upload & Process", "Excel Upload", "User Tracking"])
     else:
-        tab1, tab2 = st.tabs(["Upload & Process", "Excel Upload"])
+        tab1, tab2 = st.tabs(["Upload & Process", " "])
     
     with tab1:
         # st.markdown(f"Welcome to AKI's AI tool to extract data from documents.")
