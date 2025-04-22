@@ -235,7 +235,7 @@ def display_excel_native(excel_data):
         )
         
         search_key = f"search_input_{datetime.now().strftime('%Y%m%d%H%M%S')}"
-        search = st.text_input("🔍 Search in table:", key=search_key)
+        # search = st.text_input("🔍 Search in table:", key=search_key)
         
         if search:
             mask = edited_df.astype(str).apply(lambda x: x.str.contains(search, case=False)).any(axis=1)
