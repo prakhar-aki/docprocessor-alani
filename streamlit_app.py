@@ -2666,10 +2666,10 @@ def main_app():
             st.session_state.grid_key = 'data_editor_1'
         
         uploaded_pdfs = st.file_uploader(
-            "📄 Upload Documents",
+            " ",
             type=["pdf"],
             accept_multiple_files=True,
-            help="You can upload multiple Invoice files for different suppliers",
+            # help="You can upload multiple Invoice files for different suppliers",
             key=f"file_uploader_{st.session_state.get('refresh_timestamp', '')}"
         )
 
