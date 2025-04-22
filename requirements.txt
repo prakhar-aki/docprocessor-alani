@@ -1,0 +1,8 @@
+python-dotenv
+groq
+pandas
+streamlit
+numpy
+PyMuPDF
+openai
+openpyxl
