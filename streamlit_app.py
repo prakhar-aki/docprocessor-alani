@@ -247,7 +247,8 @@ def display_excel_native(excel_data):
         # st.markdown(f"**Total Rows:** {len(filtered_df)} | **Total Columns:** {len(filtered_df.columns)}")
         #commented to remove search
         save_key = f"save_changes_{datetime.now().strftime('%Y%m%d%H%M%S')}"
-        if st.button("💾 Save Changes", key=save_key):
+        save_key_updated = f"save_changes_updated"
+        if st.button("💾 Save Changes", key=save_key_updated):
             try:
                 st.session_state.saved_df = edited_df.copy()
                 
@@ -1146,6 +1147,7 @@ st.markdown("""
             }
             
         }
+        
         @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;600&display=swap');
 
         html, body {
@@ -1166,7 +1168,10 @@ st.markdown("""
             button:hover{
                  color:hsl(38.03deg 32.72% 57.45%);
             }
-        }    
+        }
+        .st-key-save_key_updated{
+            display:none !important; 
+            }    
             
              
     </style>
