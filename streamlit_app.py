@@ -1141,9 +1141,15 @@ st.markdown("""
                 color:white;
                 box-shadow: 2px 25px 25px rgba(0.5, 0.2, 0.2, 0.2); /* Proper shadow format */
             }
+            button:active{
+                 border:none !important;    
+                 background-color:#1A2F50 !important;
+                 color:hsl(38.03deg 32.72% 57.45%) !important;
+            }
             button:hover{
-             font-weight: bold;
-                color:hsl(38.03deg 32.72% 57.45%);
+                font-weight: bold;
+                color:white !important;
+                background-color:hsl(38.03deg 32.72% 57.45%);
             }
             
         }
@@ -1166,7 +1172,8 @@ st.markdown("""
                 box-shadow: 2px 25px 25px rgba(0.5, 0.2, 0.2, 0.2); 
             }
             button:hover{
-                 color:hsl(38.03deg 32.72% 57.45%);
+                  color:white !important;
+                background-color:hsl(38.03deg 32.72% 57.45%);
             }
         }
         .st-key-save_changes_existing , .st-key-save_changes_updated{
