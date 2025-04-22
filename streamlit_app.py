@@ -235,7 +235,7 @@ def display_excel_native(excel_data):
         )
         
         search_key = f"search_input_{datetime.now().strftime('%Y%m%d%H%M%S')}"
-        search = st.text_input("🔍 Search in table:", key=search_key)
+        search = st.text_input("🔍 Search in table: 2", key=search_key)
         
         if search:
             mask = edited_df.astype(str).apply(lambda x: x.str.contains(search, case=False)).any(axis=1)
@@ -574,7 +574,7 @@ def display_extracted_data(df):
         if 'editor_data' not in st.session_state:
             st.session_state.editor_data = df.copy()
         
-        search_query = st.text_input("🔍 Search in table:", key="search_input")
+        search_query = st.text_input("🔍 Search in table 1:", key="search_input")
         
         display_data = st.session_state.editor_data.copy()
         if search_query:
