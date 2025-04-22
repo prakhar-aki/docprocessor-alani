@@ -235,16 +235,17 @@ def display_excel_native(excel_data):
         )
         
         search_key = f"search_input_{datetime.now().strftime('%Y%m%d%H%M%S')}"
-        search = st.text_input("🔍 Search in table: 2", key=search_key)
+        # commented to remove search
+        # search = st.text_input("🔍 Search in table: 2", key=search_key)
         
-        if search:
-            mask = edited_df.astype(str).apply(lambda x: x.str.contains(search, case=False)).any(axis=1)
-            filtered_df = edited_df[mask]
-        else:
-            filtered_df = edited_df
+        # if search:
+        #     mask = edited_df.astype(str).apply(lambda x: x.str.contains(search, case=False)).any(axis=1)
+        #     filtered_df = edited_df[mask]
+        # else:
+        #     filtered_df = edited_df
             
-        st.markdown(f"**Total Rows:** {len(filtered_df)} | **Total Columns:** {len(filtered_df.columns)}")
-        
+        # st.markdown(f"**Total Rows:** {len(filtered_df)} | **Total Columns:** {len(filtered_df.columns)}")
+        #commented to remove search
         save_key = f"save_changes_{datetime.now().strftime('%Y%m%d%H%M%S')}"
         if st.button("💾 Save Changes", key=save_key):
             try:
