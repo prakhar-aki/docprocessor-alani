@@ -2009,7 +2009,7 @@ def login_page():
         col1, col2 = st.columns([5,1])
         
         with col1:
-            st.markdown("<h1 style='text-align: left; margin-left: 120px;'>AKI Agentic AI Intelligent Document Processor</h1>", unsafe_allow_html=True)
+            st.markdown("<h1 style='text-align: left; margin-left: 120px; font-family:'Epilogue', sans-serif !important;'>AKI Agentic AI Intelligent Document Processor</h1>", unsafe_allow_html=True)
 
         # with col2:
         #     if os.path.exists("assets/aki.png"):
