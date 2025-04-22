@@ -1914,11 +1914,11 @@ def login_page():
         with col1:
             st.markdown("<h1 style='text-align: left; margin-left: 120px;'>AKI Agentic AI Intelligent Document Processor</h1>", unsafe_allow_html=True)
 
-        with col2:
-            if os.path.exists("assets/aki.png"):
-                st.image("assets/aki.png", width=170)  
-            else:
-                st.markdown("<div class='logo-image'>📁</div>", unsafe_allow_html=True)
+        # with col2:
+        #     if os.path.exists("assets/aki.png"):
+        #         st.image("assets/aki.png", width=170)  
+        #     else:
+        #         st.markdown("<div class='logo-image'>📁</div>", unsafe_allow_html=True)
     
     
     with st.container():
@@ -2855,11 +2855,11 @@ def display_branding():
         <h1 style='margin-bottom: 0px; font-size: 1.5rem;'>AKI Agentic AI Intelligent Document Processor</h1>
         """, unsafe_allow_html=True)
             
-    with col2:
-        if os.path.exists("assets/aki.png"):
-            st.image("assets/aki.png", width=10)  
-        else:
-            st.markdown("📁")  
+    # with col2:
+    #     if os.path.exists("assets/aki.png"):
+    #         st.image("assets/aki.png", width=10)  
+    #     else:
+    #         st.markdown("📁")  
     
     st.markdown("<hr style='margin-top: 0; margin-bottom: 20px;'>", unsafe_allow_html=True)
 
