@@ -1137,8 +1137,13 @@ st.markdown("""
                 border:none;    
                 background-color:#1A2F50;
             color:white;
+            
             margin-bottom:1px;
-                  box-shadow: 2px 25px 25px rgba(0.9, 0.2, 0.2, 0.2); /* Proper shadow format */
+                  box-shadow: 2px 25px 25px rgba(0.5, 0.2, 0.2, 0.2); /* Proper shadow format */
+            }
+            button:hover{
+             font-weight: bold;
+                color:hsl(38.03deg 32.72% 57.45%);
             }
             
         }
