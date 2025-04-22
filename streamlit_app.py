@@ -49,9 +49,13 @@ openai_client = OpenAI(api_key=open_api_key)
 
 st.markdown("""
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;600&display=swap');
+   @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;600&display=swap');
 
-    html, body, [class*="css"] {
+    * {
+        font-family: 'Epilogue', sans-serif !important;
+    }
+
+    html, body, [class^="css"], [class*="css"] {
         font-family: 'Epilogue', sans-serif !important;
     }
     </style>
