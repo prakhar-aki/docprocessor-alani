@@ -1903,6 +1903,7 @@ def login_page():
         /* Logo image specific styling */
         .logo-image {
             text-align: right;
+            display:none;
         }
     </style>
     """, unsafe_allow_html=True)
