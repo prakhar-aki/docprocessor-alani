@@ -2796,11 +2796,11 @@ def main_app():
     
         # st.markdown("<div style='height: 200px;'></div>", unsafe_allow_html=True)
         
-        excel_file = st.text_input(
-            "📊 Excel File Name",
-            value="Data_Extract.xlsx",
-            help="Enter the name for your output Excel file"
-        )
+        # excel_file = st.text_input(
+        #     "📊 Excel File Name",
+        #     value="Data_Extract.xlsx",
+        #     help="Enter the name for your output Excel file"
+        # )
         
         # if st.button("🚪 Logout", key="logout"):
         #     st.session_state.logged_in = False
