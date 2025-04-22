@@ -1169,7 +1169,7 @@ st.markdown("""
                  color:hsl(38.03deg 32.72% 57.45%);
             }
         }
-        .st-key-save_changes_updated{
+        .st-key-save_changes_existing{
             display:none !important; 
             }    
             
