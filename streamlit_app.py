@@ -2732,7 +2732,7 @@ def main_app():
                 try:
                     # st.markdown("### 📝 Extracted and Edited Data")
                     
-                    search_query = st.text_input("🔍 Search in table:", key=f"search_input_{st.session_state.grid_key}")
+                    search_query = st.text_input("Search in table:", key=f"search_input_{st.session_state.grid_key}")
                     
                     display_df = st.session_state.edited_df.copy()
                     
