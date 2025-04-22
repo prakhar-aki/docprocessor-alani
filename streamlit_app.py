@@ -1136,10 +1136,8 @@ st.markdown("""
             button{
                 border:none;    
                 background-color:#1A2F50;
-            color:white;
-            
-            margin-bottom:1px;
-                  box-shadow: 2px 25px 25px rgba(0.5, 0.2, 0.2, 0.2); /* Proper shadow format */
+                color:white;
+                box-shadow: 2px 25px 25px rgba(0.5, 0.2, 0.2, 0.2); /* Proper shadow format */
             }
             button:hover{
              font-weight: bold;
@@ -1156,6 +1154,18 @@ st.markdown("""
         div[data-testid="stFileUploaderDropzoneInstructions"] small {
          display: none !important;
         }
+            
+        div.st-key-extractinfofromdocs{
+            button{
+                border:none;  
+                background-color:#1A2F50;
+                color:white;
+                box-shadow: 2px 25px 25px rgba(0.5, 0.2, 0.2, 0.2); 
+            }
+            button:hover{
+                 color:hsl(38.03deg 32.72% 57.45%);
+            }
+        }    
             
              
     </style>
@@ -2779,12 +2789,12 @@ def main_app():
                     st.error(f"Error displaying existing table: {str(e)}")
                     st.error(traceback.format_exc())
             else:
-                if st.button("🔍 Extract Info from Documents"):
+                if st.button("Extract Info from Documents", key="extractinfofromdocs"):
                     process_uploaded_files(pdfs_to_process)
                 # else:
                 #     st.info("Please click 'Extract Info from Documents' to process the uploaded PDF files")
     
-        st.markdown("<div style='height: 200px;'></div>", unsafe_allow_html=True)
+        # st.markdown("<div style='height: 200px;'></div>", unsafe_allow_html=True)
         
         excel_file = st.text_input(
             "📊 Excel File Name",
