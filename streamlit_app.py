@@ -1120,6 +1120,7 @@ st.markdown("""
         }
         .block-container{
             padding:2rem !important;
+            padding-top: 5px !important;
         }
     </style>
 """, unsafe_allow_html=True)
@@ -2646,7 +2647,7 @@ def main_app():
         tab1, tab2 = st.tabs(["Upload & Process", "Excel Upload"])
     
     with tab1:
-        st.markdown(f"Welcome to AKI's AI tool to extract data from documents.")
+        # st.markdown(f"Welcome to AKI's AI tool to extract data from documents.")
 
         _, center_col, _ = st.columns([1, 1, 1])
         with center_col:
@@ -2761,7 +2762,7 @@ def main_app():
         #     st.rerun()
 
     with tab2:
-        st.markdown(f"Welcome to AKI's AI Excel Upload tool.")
+        # st.markdown(f"Welcome to AKI's AI Excel Upload tool.")
         
         _, center_col, _ = st.columns([1, 1, 1])
         with center_col:
