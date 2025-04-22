@@ -1147,6 +1147,16 @@ st.markdown("""
             }
             
         }
+        @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;600&display=swap');
+
+        html, body {
+            font-family: 'Epilogue', sans-serif;
+        }
+            
+        div[data-testid="stFileUploaderDropzoneInstructions"] small {
+         display: none !important;
+        }
+            
              
     </style>
 """, unsafe_allow_html=True)
