@@ -2649,9 +2649,9 @@ def main_app():
         st.markdown(f"Welcome to AKI's AI tool to extract data from documents.")
 
         _, center_col, _ = st.columns([1, 1, 1])
-        # with center_col:
-        #     if st.button("🔄 Process Next Document", key="refresh"):
-        #         refresh_page()
+        with center_col:
+            if st.button("🔄 Process Next Document", key="refresh"):
+                refresh_page()
         
         if 'edited_df' not in st.session_state:
             st.session_state.edited_df = None
