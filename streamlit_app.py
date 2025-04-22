@@ -1184,7 +1184,23 @@ st.markdown("""
         }
         .st-key-save_changes_existing , .st-key-save_changes_updated{
             display:none !important; 
-            }    
+        }
+        section[data-testid="stFileUploaderDropzone"] {
+             button{
+                border:none;  
+                background-color:#1A2F50;
+                color:white;
+                box-shadow: 2px 25px 25px rgba(0.5, 0.2, 0.2, 0.2); 
+            }
+            button:hover{
+                  color:white !important;
+                background-color:hsl(38.03deg 32.72% 57.45%);
+            }
+            button:focus:not(:active) {
+                color:white !important;
+            }
+            
+        }
             
              
     </style>
