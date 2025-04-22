@@ -1135,7 +1135,10 @@ st.markdown("""
 
             button{
                 border:none;    
-                  box-shadow: 5px 5px 5px rgba(0.2, 0.2, 0.2, 0.2); /* Proper shadow format */
+                background-color:#1A2F50;
+            color:white;
+            margin-bottom:1px;
+                  box-shadow: 2px 25px 25px rgba(0.9, 0.2, 0.2, 0.2); /* Proper shadow format */
             }
             
         }
