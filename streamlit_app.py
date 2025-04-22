@@ -47,6 +47,17 @@ load_dotenv()
 open_api_key = os.getenv("OPENAI_API_KEY")
 openai_client = OpenAI(api_key=open_api_key)
 
+st.markdown("""
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;600&display=swap');
+
+    html, body, [class*="css"] {
+        font-family: 'Epilogue', sans-serif !important;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
+
 def admin_tracking_tab():
     """Display user tracking data for admin"""
     try:
@@ -1160,7 +1171,7 @@ st.markdown("""
         @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;600&display=swap');
 
         html, body {
-            font-family: 'Epilogue', sans-serif;
+            font-family: 'Epilogue', sans-serif !important;
         }
             
         div[data-testid="stFileUploaderDropzoneInstructions"] small {
