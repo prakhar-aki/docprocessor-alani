@@ -462,11 +462,11 @@ def process_uploaded_files(pdfs_to_process):
                         tmp_path = tmp_file.name
                         temp_files_to_clean.append(tmp_path)
                         
-                        with st.spinner(f"Extracting text from {uploaded_pdf_file.name}..."):
+                        with st.spinner(f"Extracting data from {uploaded_pdf_file.name}..."):
                             pdf_text = extract_text_pdf(tmp_path)
                             
                             if pdf_text:
-                                with st.spinner("Processing extracted text using AKI-GPT..."):
+                                with st.spinner("Processing extracted text using AKI GPT..."):
                                     estimated_tokens = len(pdf_text) // 3
                                     if estimated_tokens > 6000:
                                         st.info(f"Large document detected ({estimated_tokens} est. tokens). Processing in chunks...")
