@@ -2940,7 +2940,7 @@ def handle_pdf_error(e, pdf_name):
         st.session_state.processing_complete = False
         st.session_state.costing_numbers = {}
         st.rerun()
-
+@st.cache_data
 def display_branding():
     """Display company branding in a consistent, user-friendly way"""
     col1, col2 = st.columns([4,1])
