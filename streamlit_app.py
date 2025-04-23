@@ -466,7 +466,7 @@ def process_uploaded_files(pdfs_to_process):
                             pdf_text = extract_text_pdf(tmp_path)
                             
                             if pdf_text:
-                                with st.spinner("Processing extracted text using AKI GPT..."):
+                                with st.spinner("Processing extracted data using AKI GPT..."):
                                     estimated_tokens = len(pdf_text) // 3
                                     if estimated_tokens > 6000:
                                         st.info(f"Large document detected ({estimated_tokens} est. tokens). Processing in chunks...")
@@ -2566,11 +2566,11 @@ def standardize_headers(headers):
 #                                     tmp_path = tmp_file.name
                                 
 #                                 # Process the file
-#                                 with st.spinner(f"Extracting text from {uploaded_pdf_file.name}..."):
+#                                 with st.spinner(f"Extracting data from {uploaded_pdf_file.name}..."):
 #                                     pdf_text = extract_text_pdf(tmp_path)
                                 
 #                                 if pdf_text:
-#                                     with st.spinner("Processing extracted text using AKI-GPT..."):
+#                                     with st.spinner("Processing extracted data using AKI GPT..."):
 #                                         invoice_info = using_groq(pdf_text)
                                         
 #                                         # Process the invoice using process_invoice_lines
