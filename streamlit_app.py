@@ -1214,6 +1214,12 @@ st.markdown("""
             }
             
         }
+        .stProgress > div > div > div > div {
+        background-color: hsl(38.03deg 32.72% 57.45%); 
+        }
+        div[role="progressbar"] > div > div > div {
+            background-color: hsl(38.03deg 32.72% 57.45%);
+        }
             
              
     </style>
