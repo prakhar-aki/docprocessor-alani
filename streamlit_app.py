@@ -2961,27 +2961,12 @@ def handle_pdf_error(e, pdf_name):
 
 def display_branding():
     """Display company branding in a consistent, user-friendly way"""
-    col1, col2 = st.columns([1,1])
+    col1, col2 = st.columns([3,1])
     
     with col1:
         st.markdown("""
         <p style='margin-bottom: 0px; font-size: 1.5rem;'>AKI Agentic AI Intelligent Document Processor</p>
         """, unsafe_allow_html=True)
-        # if st.button("⭯", key="refresh_b"):
-        #     refresh_page()
-        
-        # img = base64.b64encode(open("assets/refresh.png", "rb").read()).decode()
-        # st.markdown(f"""
-        #     <form action="" method="get">
-        #         <button style="border:none; background:none;">
-        #             <img src="data:image/png;base64,{img}" width="20"/>
-        #         </button>
-        #     </form>
-        # """, unsafe_allow_html=True)
-        
-        # st.image("assets/refresh.png", width=40)
-        # if st.button("Refresh"):
-        #     refresh_page()
             
     with col2:   
         # icon = Image.open("assets/refresh.png")     
