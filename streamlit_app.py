@@ -22,6 +22,7 @@ import streamlit.components.v1 as components
 import gc
 import fitz
 from openai import OpenAI
+from PIL import Image
 
 
 warnings.filterwarnings('ignore', category=RuntimeWarning)
@@ -1152,22 +1153,22 @@ st.markdown("""
 
             button{
                 border:none;    
-                background-color:#1A2F50;
-                color:white;
-                box-shadow: 2px 25px 25px rgba(0.5, 0.2, 0.2, 0.2); /* Proper shadow format */
+                background-color:none;
+                color:hsl(38.03deg 32.72% 57.45%);
+                # box-shadow: 2px 25px 25px rgba(0.5, 0.2, 0.2, 0.2); /* Proper shadow format */
             }
             button:active{
                  border:none !important;    
-                 background-color:#1A2F50 !important;
+                 background-color:white;
                  color:hsl(38.03deg 32.72% 57.45%) !important;
             }
             button:hover{
                 font-weight: bold;
-                color:white !important;
-                background-color:hsl(38.03deg 32.72% 57.45%);
+                color:hsl(38.03deg 32.72% 57.45%); !important;
+                background-color:none;
             }
             button:focus:not(:active) {
-                color:white !important;
+                color:hsl(38.03deg 32.72% 57.45%); !important;
             }
             
         }
@@ -2960,12 +2961,15 @@ def handle_pdf_error(e, pdf_name):
 
 def display_branding():
     """Display company branding in a consistent, user-friendly way"""
-    col1, col2 = st.columns([4,1])
+    col1, col2 = st.columns([1,1])
     
     with col1:
         st.markdown("""
         <p style='margin-bottom: 0px; font-size: 1.5rem;'>AKI Agentic AI Intelligent Document Processor</p>
         """, unsafe_allow_html=True)
+        # if st.button("⭯", key="refresh_b"):
+        #     refresh_page()
+        
         # img = base64.b64encode(open("assets/refresh.png", "rb").read()).decode()
         # st.markdown(f"""
         #     <form action="" method="get">
@@ -2979,17 +2983,12 @@ def display_branding():
         # if st.button("Refresh"):
         #     refresh_page()
             
-    with col2:
-        img = base64.b64encode(open("assets/refresh.png", "rb").read()).decode()
-        st.markdown(f"""
-            <form action="" method="get">
-                <button style="border:none; background:none;">
-                    <img src="data:image/png;base64,{img}" width="20"/>
-                </button>
-            </form>
-        """, unsafe_allow_html=True)
-        # if st.button("🔄", key="refresh"):
-            # refresh_page()
+    with col2:   
+        # icon = Image.open("assets/refresh.png")     
+        # img = base64.b64encode(open("assets/refresh.png", "rb").read()).decode()
+        if st.button("⭯", key="refresh"):
+            refresh_page()
+            
     #     if os.path.exists("assets/aki.png"):
     #         st.image("assets/aki.png", width=10)  
     #     else:
