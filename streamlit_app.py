@@ -237,12 +237,19 @@ def display_excel_native(excel_data):
         
         if session_key not in st.session_state:
             st.session_state[session_key] = df.copy()
-        
+
+        # Set height based on number of rows (e.g., 40px per row + some padding)
+        row_height = 40
+        min_height = 100
+        max_height = 800
+        buffer = 60
+
+        dynamic_height = min(max_height, max(min_height, len(df) * row_height + buffer))
         edited_df = st.data_editor(
             df,  
             use_container_width=True,
             num_rows="dynamic",
-            height=6000,
+            height=dynamic_height,
             key=f'grid_{datetime.now().strftime("%Y%m%d%H%M%S")}',  
             column_config={col: st.column_config.Column(
                 width="auto",
