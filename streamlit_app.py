@@ -209,6 +209,7 @@ def admin_tracking_tab():
 def display_excel_native(excel_data):
     """Display Excel data with proper handling of both bytes and DataFrame inputs"""
     try:
+        
         if isinstance(excel_data, pd.DataFrame):
             df = excel_data
             buffer = io.BytesIO()
@@ -240,7 +241,7 @@ def display_excel_native(excel_data):
             df,  
             use_container_width=True,
             num_rows="dynamic",
-            height=600,
+            height=6000,
             key=f'grid_{datetime.now().strftime("%Y%m%d%H%M%S")}',  
             column_config={col: st.column_config.Column(
                 width="auto",
@@ -1219,6 +1220,16 @@ st.markdown("""
         }
         div[role="progressbar"] > div > div > div {
             background-color: hsl(38.03deg 32.72% 57.45%);
+        }
+            
+        div[data-baseweb="tab-list"]{
+           display:none !important;
+        }
+        div[data-baseweb="tab-border"]{
+           display:none !important;
+        }
+        div.stFileUploader label{
+            display:none;
         }
             
              
@@ -2749,10 +2760,10 @@ def main_app():
     with tab1:
         # st.markdown(f"Welcome to AKI's AI tool to extract data from documents.")
 
-        _, center_col, _ = st.columns([1, 1, 1])
-        with center_col:
-            if st.button("Process Next Document", key="refresh"):
-                refresh_page()
+        # _, center_col, _ = st.columns([1, 1, 1])
+        # with center_col:
+        #     if st.button("Process Next Document", key="refresh"):
+        #         refresh_page()
         
         if 'edited_df' not in st.session_state:
             st.session_state.edited_df = None
@@ -2843,7 +2854,7 @@ def main_app():
                     st.error(f"Error displaying existing table: {str(e)}")
                     st.error(traceback.format_exc())
             else:
-                if st.button("Extract Info from Documents", key="extractinfofromdocs"):
+                # if st.button("Extract Info from Documents", key="extractinfofromdocs"):
                     process_uploaded_files(pdfs_to_process)
                 # else:
                 #     st.info("Please click 'Extract Info from Documents' to process the uploaded PDF files")
@@ -2946,7 +2957,7 @@ def handle_pdf_error(e, pdf_name):
         st.session_state.processing_complete = False
         st.session_state.costing_numbers = {}
         st.rerun()
-@st.cache_data
+
 def display_branding():
     """Display company branding in a consistent, user-friendly way"""
     col1, col2 = st.columns([4,1])
@@ -2955,8 +2966,30 @@ def display_branding():
         st.markdown("""
         <p style='margin-bottom: 0px; font-size: 1.5rem;'>AKI Agentic AI Intelligent Document Processor</p>
         """, unsafe_allow_html=True)
+        # img = base64.b64encode(open("assets/refresh.png", "rb").read()).decode()
+        # st.markdown(f"""
+        #     <form action="" method="get">
+        #         <button style="border:none; background:none;">
+        #             <img src="data:image/png;base64,{img}" width="20"/>
+        #         </button>
+        #     </form>
+        # """, unsafe_allow_html=True)
+        
+        # st.image("assets/refresh.png", width=40)
+        # if st.button("Refresh"):
+        #     refresh_page()
             
-    # with col2:
+    with col2:
+        img = base64.b64encode(open("assets/refresh.png", "rb").read()).decode()
+        st.markdown(f"""
+            <form action="" method="get">
+                <button style="border:none; background:none;">
+                    <img src="data:image/png;base64,{img}" width="20"/>
+                </button>
+            </form>
+        """, unsafe_allow_html=True)
+        # if st.button("🔄", key="refresh"):
+            # refresh_page()
     #     if os.path.exists("assets/aki.png"):
     #         st.image("assets/aki.png", width=10)  
     #     else:
